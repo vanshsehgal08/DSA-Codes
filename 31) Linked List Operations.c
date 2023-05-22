@@ -23,7 +23,7 @@ void insertAtEnd(struct Node** head, int data) {
         temp->next = newNode;
     }
 }
-
+//
 // Function to remove all elements from the linked list that match a given value
 void removeElements(struct Node** head, int value) {
     if (*head == NULL) {
