@@ -2,8 +2,7 @@
 #include <stdlib.h>
 
 
-struct stack
-{
+struct stack{
     int size;
     int top;
     char *arr;
@@ -84,7 +83,6 @@ int parenthesisMatch(char * exp){
     }
     
 }
-
 
 int main()
 {

@@ -10,18 +10,6 @@ typedef struct STACK{
     int top;
 }mySTACK;
 
-
-// operation supported on STACK
-void push(mySTACK *s);
-void show(mySTACK *s);
-int pop(mySTACK *s);
-int top(mySTACK *s);
-void delete(mySTACK *s);
-int isFull(mySTACK *s);
-int isEmpty(mySTACK *s);
-
-
-
 //Defining function isEmpty
 int isEmpty(mySTACK *s){
     if(s->top == -1){
@@ -42,7 +30,6 @@ int isFull(mySTACK *s){
     }
 }
 
-
 //Defining push operation
 void push(mySTACK *s){
     int element;
@@ -58,7 +45,6 @@ void push(mySTACK *s){
     }
 }
 
-
 //Defining pop operation
 int pop(mySTACK *s){
     int element;
@@ -72,7 +58,6 @@ int pop(mySTACK *s){
         return element;
     }
 }
-
 
 //Defining peek operation
 int peek(mySTACK *s){
@@ -90,7 +75,6 @@ int peek(mySTACK *s){
     }
 }
 
-
 //Defining show stack operation
 void show(mySTACK *s){
     int i;
@@ -106,7 +90,6 @@ void show(mySTACK *s){
     }
 }
 
-
 //Defining top operation
 int top(mySTACK *s){
     int element;
@@ -120,7 +103,6 @@ int top(mySTACK *s){
         return 0;
     }
 }
-
 
 //Delete Stack
 void delete(mySTACK *s){

@@ -1,8 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-typedef struct myArray
-{
+typedef struct myArray{
     int total_size;
     int used_size;
     int *ptr;

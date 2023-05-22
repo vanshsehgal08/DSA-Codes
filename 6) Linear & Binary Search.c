@@ -12,7 +12,6 @@ int linearSearch(int arr[], int size, int element){
     return -1;
 }
 
-
 int binarySearch(int arr[], int size, int element){
     int low, mid, high;
     low = 0;
@@ -33,12 +32,12 @@ int binarySearch(int arr[], int size, int element){
     return -1;
     
 }
- 
+
 int main(){
     // Unsorted array for linear search
     // int arr[] = {1,3,5,56,4,3,23,5,4,54634,56,34};
     // int size = sizeof(arr)/sizeof(int);
- 
+
     // Sorted array for binary search
     int arr[] = {1,3,5,56,64,73,123,225,444};
     int size = sizeof(arr)/sizeof(int);

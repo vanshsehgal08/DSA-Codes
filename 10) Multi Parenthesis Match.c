@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include<string.h>
 
-struct stack
-{
+struct stack{
     int size;
     int top;
     char *arr;

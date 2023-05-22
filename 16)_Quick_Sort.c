@@ -39,8 +39,7 @@ int partition(int A[], int low, int high)
     return j;
 }
 
-void quickSort(int A[], int low, int high)
-{
+void quickSort(int A[], int low, int high){
     int partitionIndex; // Index of pivot after partition
 
     if (low < high)

@@ -73,8 +73,6 @@ int stackBottom(struct stack* sp){
     return sp->arr[0];
 }
 
-
-
 int main(){
     struct stack *sp = (struct stack *) malloc(sizeof(struct stack));
     sp->size = 50;

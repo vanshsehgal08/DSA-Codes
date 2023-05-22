@@ -22,7 +22,7 @@ int maximum(int A[], int n){
     
 }
 
-void countSort(int * A, int n){
+void countSort(int A[], int n){
     int i, j;
     // Find the maximum element in A
     int max = maximum(A, n); 

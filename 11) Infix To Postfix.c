@@ -110,12 +110,69 @@ char* infixToPostfix(char infix[]) {
     return postfix;
 }
 
-int main() {
-    char infix[100];
-    printf("Enter an expression: ");
-    fgets(infix, 100, stdin);
-    char* postfix = infixToPostfix(infix);
-    printf("Postfix is %s\n", postfix);
-    free(postfix);
-    return 0;
+int evaluate(char op, int op1, int op2){
+    switch (op)
+    {
+    case '+':
+        return op1 + op2;
+    case '-':
+        return op1 - op2;
+    case '*':
+        return op1 * op2;
+    case '/':
+        return op1 / op2;
+    default:
+        return 0;
+    }
 }
+
+int postfixEvaluate(char postfix[])
+{
+    mystack *sp = (mystack *)malloc(sizeof(mystack));
+    sp->size = 10;
+    sp->top = -1;
+    sp->arr = (char *)malloc(sp->size * sizeof(char));
+    int i = 0; // Track postfix traversal
+    while (postfix[i] != '\0')
+    {
+        if (!isOperator(postfix[i]))
+        {
+            push(sp, postfix[i] - '0'); // convert char to int and push to stack
+            i++;
+        }
+        else
+        {
+            int op2 = pop(sp);
+            int op1 = pop(sp);
+            int result = evaluate(postfix[i], op1, op2);
+            push(sp, result);
+            i++;
+        }
+    }
+    int finalResult = pop(sp);
+    free(sp->arr);
+    free(sp);
+    return finalResult;
+}
+
+int main()
+{
+    char infix[100];
+    printf("Enter an infix expression: ");
+    fgets(infix, sizeof(infix), stdin);
+    infix[strlen(infix) - 1] = '\0'; // remove the newline character
+
+    char *postfix = infixToPostfix(infix);
+    printf("Postfix expression: %s\n", postfix);
+
+    int result = postfixEvaluate(postfix);
+    printf("Result: %d\n", result);
+
+    return 0;
+
+}
+
+
+
+
+

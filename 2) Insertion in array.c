@@ -1,6 +1,5 @@
 #include<stdio.h>
 
-
 void display(int arr[], int n){
     // Code for Traversal
     for (int i = 0; i < n; i++)
