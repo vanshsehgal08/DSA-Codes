@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-void printArray(int *A, int n)
-{
+void printArray(int A[], int n){
     for (int i = 0; i < n; i++)
     {
         printf("%d ", A[i]);
@@ -9,8 +8,7 @@ void printArray(int *A, int n)
     printf("\n");
 }
 
-void merge(int A[], int low, int mid, int high)
-{
+void merge(int A[], int low, int mid, int high){
     int i, j, k, B[100];
     i = low;
     j = mid + 1;
@@ -62,11 +60,15 @@ void mergeSort(int A[], int low, int high){
 
 int main()
 {
-    // int A[] = {9, 14, 4, 8, 7, 5, 6};
-    int A[] = {9, 1, 4, 14, 4, 15, 6};
-    int n = 7;
-    printArray(A, n);
-    mergeSort(A, 0, 6);
-    printArray(A, n);
+    int size;
+    printf("Enter size: ");
+    scanf("%d",&size);
+    int arr[size];
+    printf("Enter Array: ");
+    for(int i=0;i<size;i++){
+        scanf("%d, ",&arr[i]);
+    }    
+    mergeSort(arr,0,size);
+    printArray(arr, size);
     return 0;
 }

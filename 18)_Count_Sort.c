@@ -2,15 +2,13 @@
 #include<limits.h>
 #include<stdlib.h>
 
-void printArray(int *A, int n)
-{
+void printArray(int A[], int n){
     for (int i = 0; i < n; i++)
     {
         printf("%d ", A[i]);
     }
     printf("\n");
 }
-
 
 int maximum(int A[], int n){
     int max = INT_MIN;
@@ -23,6 +21,7 @@ int maximum(int A[], int n){
     return max;
     
 }
+
 void countSort(int * A, int n){
     int i, j;
     // Find the maximum element in A
@@ -59,10 +58,15 @@ void countSort(int * A, int n){
 }
 
 int main(){
-    int A[] = {9, 1, 4, 14, 4, 15, 6};
-    int n = 7;
-    printArray(A, n);
-    countSort(A, n);
-    printArray(A, n); 
+    int size;
+    printf("Enter size: ");
+    scanf("%d",&size);
+    int arr[size];
+    printf("Enter Array: ");
+    for(int i=0;i<size;i++){
+        scanf("%d, ",&arr[i]);
+    }    
+    countSort(arr,size);
+    printArray(arr,size);
     return 0;
 }
