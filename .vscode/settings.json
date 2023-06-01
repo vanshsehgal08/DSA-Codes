@@ -43,5 +43,6 @@
     "stackbottom",
     "stacktop"
   ],
-  "C_Cpp_Runner.showCompilationTime": false
+  "C_Cpp_Runner.showCompilationTime": false,
+  "editor.fontLigatures": true
 }
