@@ -21,3 +21,5 @@
 4) Traversals
       - BFS
       - DFS
+5) Divide & Conquer
+6) Greedy Approach
